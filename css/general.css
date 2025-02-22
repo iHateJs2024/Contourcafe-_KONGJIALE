@@ -4,8 +4,7 @@ html {
   scroll-behavior: smooth;
   height: 100%;
   min-height: 100svh;
-  overflow-x: hidden;
-  overflow-y: hidden;
+  overflow: hidden;
   /* DONT PUT OVERFLOW: HIDDEN IT WILL CAUSE PROBLEMS ! */
 }
 
@@ -17,6 +16,18 @@ body {
   min-height: 100svh;
   overflow-x: hidden;
   overflow-y: auto;
+}
+
+.scroll-wrapper {
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
 
 .blur-hide-scroll-bar {

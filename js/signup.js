@@ -271,12 +271,12 @@ function checkValidityUsername() {
     //? Valid input
     if (inputValue !== "") {
       // console.log("has value!");
-      label.classList.add("active");
+      label.classList.add("active-valid");
     }
     //? Invalid input
     else if (inputValue === "") {
       // console.log("no value!");
-      label.classList.remove("active");
+      label.classList.remove("active-valid");
       label.classList.add("invalid");
       input.classList.add("invalid");
       errorTextUsername.innerHTML = "Nama diperlukan";
@@ -416,12 +416,13 @@ function checkValidityEmail() {
     //? Valid input
     if (inputElement.checkValidity()) {
       // console.log("has value!");
-      label.classList.add("active");
+      label.classList.add("active-valid");
     }
     //? Invalid input
     else if (!inputElement.checkValidity()) {
       if (inputValue) {
         // console.log("has value but invalid!");
+        label.classList.remove("active-valid");
         label.classList.add("active");
         label.classList.add("invalid");
         inputElement.classList.add("invalid");
@@ -429,6 +430,7 @@ function checkValidityEmail() {
         errorTextEmail.classList.add("invalid");
       } else {
         // console.log("no value and invalid!");
+        label.classList.remove("active-valid");
         label.classList.remove("active");
         label.classList.add("invalid");
         inputElement.classList.add("invalid");
@@ -491,13 +493,14 @@ function checkValidityNohp() {
     //? Valid input
     if (inputElement.checkValidity()) {
       // console.log("has value and valid!");
-      label.classList.add("active");
+      label.classList.add("active-valid");
     }
     //? Invalid input
     else if (!inputElement.checkValidity()) {
       if (inputValue === "") {
         // console.log("no value and invalid!");
         label.classList.remove("active");
+        label.classList.remove("active-valid");
         label.classList.add("invalid");
         inputElement.classList.add("invalid");
         errorTextNohp.innerHTML = "Nombor Telefon diperlukan";
@@ -505,6 +508,7 @@ function checkValidityNohp() {
       } else {
         // console.log("has value but invalid!");
         label.classList.add("active");
+        label.classList.remove("active-valid");
         label.classList.add("invalid");
         inputElement.classList.add("invalid");
         errorTextNohp.innerHTML = "Sila masukkan nombor telefon yang betul!";

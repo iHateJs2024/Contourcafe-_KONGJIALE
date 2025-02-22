@@ -287,8 +287,12 @@ document.getElementById("7th-time").textContent = time[seventhTime];
 const sections = document.querySelectorAll("section");
 const navA = document.querySelectorAll("nav ul li a");
 
+//! Add active class to the first link
+document.getElementById("K01").classList.add("active");
+const scrollWrapper = document.querySelector(".scroll-wrapper");
+
 //?When the window is scrolled RUN THIS FUNCTION.
-window.addEventListener("scroll", () => {
+scrollWrapper.addEventListener("wheel", () => {
   //? Default value
   let current = "K01";
 
@@ -299,9 +303,9 @@ window.addEventListener("scroll", () => {
 
     //?Check the current section.
     //? IF THE SCROLL Y IS GREATER THAN THE TOP OF THE SECTION IT MEANS THAT SECTION IS VISIBLE.
-    if (window.scrollY >= sectionTop - 80) {
+    if (scrollWrapper.scrollTop >= sectionTop - 80) {
       current = section.getAttribute("id");
-      // console.log("window.addEventListener  current:", current);
+      // console.log("current:", current);
     }
   });
 
@@ -319,8 +323,37 @@ window.addEventListener("scroll", () => {
   });
 });
 
-//! Add active class to the first link
-document.getElementById("K01").classList.add("active");
+scrollWrapper.addEventListener("scroll", () => {
+  //? Default value
+  let current = "K01";
+
+  //?Loop through the all the sections
+  sections.forEach((section) => {
+    //?Get the top of the section.
+    const sectionTop = section.offsetTop;
+
+    //?Check the current section.
+    //? IF THE SCROLL Y IS GREATER THAN THE TOP OF THE SECTION IT MEANS THAT SECTION IS VISIBLE.
+    if (scrollWrapper.scrollTop >= sectionTop - 80) {
+      current = section.getAttribute("id");
+      // console.log("current:", current);
+    }
+  });
+
+  //? a is the link in the nav bar.
+  //? Loop through the nav a and add active class to the current section.
+  //? IF THE NAV A HAS THE SAME CLASS AS THE CURRENT SECTION ADD ACTIVE CLASS TO IT.
+  //? ELSE REMOVE THE ACTIVE CLASS.
+  //? THIS WILL MAKE THE NAV A ACTIVE WHEN THE SECTION IS VISIBLE.
+  //? THIS WILL ALSO REMOVE THE ACTIVE CLASS WHEN THE SECTION IS NOT VISIBLE.
+  navA.forEach((a) => {
+    a.classList.remove("active");
+    if (a.classList.contains(current)) {
+      a.classList.add("active");
+    }
+  });
+});
+
 //* JS for actvie Nav Bar ends here!
 
 //* JS for food preview starts here!

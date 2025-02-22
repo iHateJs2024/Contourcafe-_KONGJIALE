@@ -108,6 +108,14 @@ $conn->close();
 
   <!-- Background image starts here! -->
   <section class="background-image-section">
+    <!--System Title starts here -->
+    <div class="system-title">
+      <p>
+        Sistem Tempahan Makanan Contour Cafe'
+      </p>
+    </div>
+    <!--System Title ends here -->
+
     <div class="welcome-content">
       <p class="welcome-text">
         Selamat Datang Ke <strong>Contour Cafe'!</strong>
