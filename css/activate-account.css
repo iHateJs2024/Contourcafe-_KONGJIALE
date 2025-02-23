@@ -40,7 +40,9 @@
   align-items: start;
   justify-content: center;
   width: 100vw;
-  margin-bottom: 0;
+  margin-bottom: 10px;
+  min-height: max-content;
+  height: 100svh;
 }
 
 .main-content {

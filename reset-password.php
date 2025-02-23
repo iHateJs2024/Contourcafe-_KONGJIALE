@@ -4,7 +4,8 @@ $token = $_GET["token"];
 
 $token_hash = $token;
 
-$mysqli = require __DIR__ . "/connect.php";
+include_once(__DIR__ . '/connect.php');
+$mysqli = getConnection();
 
 $sql = "SELECT * FROM pelanggan 
         WHERE reset_token_hash = ?";
@@ -84,6 +85,14 @@ if (strtotime($user["reset_token_expires_at"]) <= time()) {
     </div>
   </header>
   <!--Navigation bar ends here! -->
+
+  <!--System Title starts here -->
+  <div class="system-title">
+    <p>
+      Sistem Tempahan Makanan Contour Cafe'
+    </p>
+  </div>
+  <!--System Title ends here -->
 
   <!-- Main content starts here! -->
   <main class="main">

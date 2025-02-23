@@ -362,6 +362,10 @@ body {
   display: none;
 }
 
+.mobile-system-title {
+  display: none;
+}
+
 @media (max-width: 700px) {
   .main {
     padding-top: 0;
@@ -479,6 +483,22 @@ body {
     padding: 0 15px 0 15px;
     font-size: 40px;
     font-weight: 400;
+  }
+
+  .mobile-system-title {
+    display: block !important;
+    background-color: rgb(234, 228, 216);
+  }
+
+  .mobile-system-title p {
+    text-align: center;
+    color: rgb(194, 138, 132);
+    font-size: 20px;
+    font-weight: 700;
+  }
+
+  .system-title {
+    display: none;
   }
 
   .links-section {

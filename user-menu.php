@@ -108,6 +108,14 @@ $conn->close();
   <div class="scroll-wrapper">
     <!--Background image starts here-->
     <div class="div-background-image">
+      <!--System Title starts here -->
+      <div class="system-title">
+        <p>
+          Sistem Tempahan Makanan Contour Cafe'
+        </p>
+      </div>
+      <!--System Title ends here -->
+
       <!--Main banner starts here-->
       <div class="main-banner">
         <!--Sub banner starts here-->

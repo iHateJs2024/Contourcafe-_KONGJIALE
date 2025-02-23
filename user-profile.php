@@ -273,6 +273,13 @@ if (!empty($messages)) {
       </button>
     </div>
     <!-- Mobile version settings ends here! -->
+    <!--System Title starts here -->
+    <div class="mobile-system-title">
+      <p>
+        Sistem Tempahan Makanan Contour Cafe'
+      </p>
+    </div>
+    <!--System Title ends here -->
   </header>
   <!--Navigation bar ends here-->
 
@@ -320,6 +327,14 @@ if (!empty($messages)) {
     </div>
   </dialog>
   <!-- Mobile version Setting Dialog ends here! -->
+
+  <!--System Title starts here -->
+  <div class="system-title">
+    <p>
+      Sistem Tempahan Makanan Contour Cafe'
+    </p>
+  </div>
+  <!--System Title ends here -->
 
   <!-- Main content starts here! -->
   <main class="main">

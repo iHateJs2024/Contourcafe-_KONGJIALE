@@ -11,7 +11,13 @@ if (isset($_POST["email"])) {
   date_default_timezone_set("Asia/Kuala_Lumpur");
   $expiry = date("Y-m-d H:i:s", time() + 60 * 30);
 
-  $mysqli = require __DIR__ . "/connect.php";
+  include_once(__DIR__ . '/connect.php');
+  $mysqli = getConnection();
+
+  // Check connection
+  if ($mysqli->connect_error) {
+    die("Connection failed: " . $mysqli->connect_error);
+  }
 
   $sql = "UPDATE pelanggan
         SET reset_token_hash = ?,
@@ -133,6 +139,14 @@ if (isset($_POST["email"])) {
   </header>
   <!--Navigation bar ends here-->
 
+  <!--System Title starts here -->
+  <div class="system-title">
+    <p>
+      Sistem Tempahan Makanan Contour Cafe'
+    </p>
+  </div>
+  <!--System Title ends here -->
+
   <!-- Main Content starts here! -->
   <main class="main">
     <form action="forgot-password.php" method="post">
@@ -152,7 +166,7 @@ if (isset($_POST["email"])) {
               required />
             <label for="email" id="label-email" class="label-username">Email</label>
           </div>
-          <p id="example-text-email" class="example-text-email">e.g. kongjiale12gmail.com</p>
+          <p id="example-text-email" class="example-text-email">e.g. kongjiale12@gmail.com</p>
         </div>
 
         <div class="send-username-div">

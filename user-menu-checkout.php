@@ -112,6 +112,14 @@ if (!isset($_SESSION['idpelanggan'])) {
   </header>
   <!--Navigation bar ends here-->
 
+  <!--System Title starts here -->
+  <div class="system-title">
+    <p>
+      Sistem Tempahan Makanan Contour Cafe'
+    </p>
+  </div>
+  <!--System Title ends here -->
+
   <!-- Screen Loader starts here! -->
   <div class="loader"></div>
   <!-- Screen Loader ends here! -->

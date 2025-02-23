@@ -22,6 +22,7 @@
   /*
   ! VERY IMPORTANT TO MAKE FOOTER MOVE WITH THE SCREEN !
   */
+  min-height: 200px;
   height: calc(100svh - 335px);
   max-height: unset;
   /*

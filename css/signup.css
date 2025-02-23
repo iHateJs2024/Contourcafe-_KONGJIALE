@@ -571,3 +571,35 @@ input[type="checkbox"].toggle:checked:active + label::after {
     margin-bottom: 50px;
   }
 }
+
+/* CSS for title starts here! */
+.system-title {
+  box-sizing: border-box;
+  position: relative;
+  top: 100px;
+  left: 0;
+  width: 100svw;
+  display: flex;
+  justify-content: center;
+}
+
+.system-title p {
+  box-sizing: border-box;
+  background-color: #eae4d8;
+  border-radius: 0 0 10px 10px;
+  padding: 10px;
+  color: rgb(194, 138, 132);
+  font-weight: 700;
+  font-size: 20px;
+  text-align: center;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+}
+/* CSS for title ends here */
+
+/* CSS for mobile starts here! */
+@media (max-width: 385px) {
+  .system-title p {
+    border-radius: 0;
+  }
+}
+/* CSS for mobile ends here! */

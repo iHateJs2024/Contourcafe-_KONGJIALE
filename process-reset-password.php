@@ -4,7 +4,8 @@ $token = $_POST["token"];
 
 $token_hash = $token;
 
-$mysqli = require __DIR__ . "/connect.php";
+include_once(__DIR__ . '/connect.php');
+$mysqli = getConnection();
 
 $sql = "SELECT * FROM pelanggan 
         WHERE reset_token_hash = ?";
